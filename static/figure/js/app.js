@@ -1,8 +1,7 @@
 
 $(function(){
 
-    var figureModel = new FigureModel( {'canvas_width': 4000, 'canvas_height': 3000,
-            'paper_width': 612, 'paper_height': 792});
+    var figureModel = new FigureModel();
 
     // var figureFiles = new FileList();
     // figureFiles.fetch();
@@ -65,9 +64,14 @@ $(function(){
             } else {
                 figureModel.unset('fileId');
             }
-            figureModel.delete_all();
+            figureModel.delete_panels();
             figureModel.unset("figureName");
-            figureModel.trigger('reset_undo_redo');
+
+            figureModel.set(figureModel.defaults);
+            // wait for undo/redo to handle above, then...
+            setTimeout(function() {
+                figureModel.trigger("reset_undo_redo");
+            }, 50);
 
             return false;
         },
