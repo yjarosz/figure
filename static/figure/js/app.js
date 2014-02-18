@@ -99,4 +99,12 @@ $(function(){
     app = new FigureRouter();
     Backbone.history.start();
 
+
+    // TEMP hack to play with print layout
+    $(".navbar").hide();
+    $(".modal-dialog").hide();
+    $("footer").hide();
+    $('svg').remove();
+    $("main").css({'top': 0, 'height': '100%', 'overflow': 'hidden'});
+    $("article").css('transform', 'scale(1.0,1.0)');
 });

@@ -407,8 +407,8 @@
         defaults: {
             // 'curr_zoom': 100,
             'unsaved': false,
-            'canvas_width': 10000,
-            'canvas_height': 8000,
+            'canvas_width': 1000,
+            'canvas_height': 1000,
             // w & h from reportlab.
             'paper_width': 612,
             'paper_height': 792,
