@@ -50,6 +50,7 @@ class="btn btn-default channel-btn <% if(c.active) { %>ch-btn-down<% } else if (
         <button type="button" class="btn btn-default btn-sm z-projection
                 <% if(z_projection) { %>zp-btn-down<% } else if (typeof z_projection == 'boolean') { %><% } else { %>ch-btn-flat<% }%>"
                 <% if (z_projection_disabled) { %>disabled="disabled"<% } %>
+                style="display:none"
                 >
             <span class="glyphicon"></span>
         </button>
