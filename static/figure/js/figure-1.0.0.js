@@ -2347,7 +2347,7 @@ var FileListItemView = Backbone.View.extend({
             $.getJSON(BASE_WEBFIGURE_URL + 'imgData/' + parseInt(idInput, 10) + '/', function(data){
 
                 // Don't allow BIG images
-                if (data.size.width * data.size.height > 5000 * 5000) {
+                if (data.size.width * data.size.height > 10000 * 10000) {
                     alert("Image '" + data.meta.imageName + "' is too big for OMERO.figure");
                     return;
                 }
@@ -2630,7 +2630,7 @@ var FileListItemView = Backbone.View.extend({
                 // work with the response
                 success: function( data ) {
 
-                    if (data.size.width * data.size.height > 5000 * 5000) {
+                    if (data.size.width * data.size.height > 10000 * 10000) {
                         alert("Image '" + data.meta.imageName + "' is too big for OMERO.figure");
                         return;
                     }
